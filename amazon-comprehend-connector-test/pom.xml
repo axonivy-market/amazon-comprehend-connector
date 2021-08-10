@@ -19,10 +19,10 @@
       <type>iar</type>
     </dependency>
     <dependency>
-    	<groupId>com.axonivy.ivy.webtest</groupId>
-    	<artifactId>web-tester</artifactId>
-    	<version>9.2.0</version>
-    	<scope>test</scope>
+      <groupId>com.axonivy.ivy.webtest</groupId>
+      <artifactId>web-tester</artifactId>
+      <version>9.2.0</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -35,12 +35,23 @@
         <version>9.2.2</version>
         <extensions>true</extensions>
         <configuration>
-        	<additionalVmOptions>
+          <additionalVmOptions>
         		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}
         		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}
         	</additionalVmOptions>
         </configuration>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.0.0-M1</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
