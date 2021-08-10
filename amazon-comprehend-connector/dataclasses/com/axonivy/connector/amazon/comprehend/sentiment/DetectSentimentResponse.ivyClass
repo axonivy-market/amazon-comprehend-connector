@@ -1,0 +1,12 @@
+DetectSentimentResponse #class
+com.axonivy.connector.amazon.comprehend.sentiment #namespace
+sentiment String #field
+sentiment PERSISTENT #fieldModifier
+positive Double #field
+positive PERSISTENT #fieldModifier
+negative Double #field
+negative PERSISTENT #fieldModifier
+neutral Double #field
+neutral PERSISTENT #fieldModifier
+mixed Double #field
+mixed PERSISTENT #fieldModifier

@@ -8,7 +8,7 @@
   <modules>
     <module>amazon-comprehend-connector</module>
     <module>amazon-comprehend-connector-demo</module>
-    <!--<module>${project.name}-test</module>-->
+    <module>amazon-comprehend-connector-test</module>
   </modules>
 
   <scm>
