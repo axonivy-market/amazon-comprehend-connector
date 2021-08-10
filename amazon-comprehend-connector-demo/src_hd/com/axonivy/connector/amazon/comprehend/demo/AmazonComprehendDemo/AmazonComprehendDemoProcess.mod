@@ -38,8 +38,8 @@ As0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 As0 f0 83 51 26 26 -20 15 #rect
-As0 f1 547 51 26 26 0 12 #rect
-As0 f2 109 64 547 64 #arcP
+As0 f1 603 51 26 26 0 12 #rect
+As0 f2 109 64 603 64 #arcP
 As0 f3 guid 17B2B1D02A5A1833 #txt
 As0 f3 actionTable 'out=in;
 ' #txt
@@ -50,7 +50,7 @@ As0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-As0 f3 83 147 26 26 -16 15 #rect
+As0 f3 83 147 26 26 -40 16 #rect
 As0 f7 processCall amazon-comprehend/DetectEntities:call(com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest) #txt
 As0 f7 requestActionDecl '<com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest request> param;' #txt
 As0 f7 requestMappingAction 'param.request.languageCode=in.languageCode;
@@ -84,9 +84,9 @@ As0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-As0 f4 256 138 256 44 -120 -7 #rect
-As0 f5 547 147 26 26 0 12 #rect
-As0 f8 512 160 547 160 #arcP
+As0 f4 256 136 256 48 -120 -7 #rect
+As0 f5 603 147 26 26 0 12 #rect
+As0 f8 512 160 603 160 #arcP
 As0 f11 guid 17B2B298F11EDE1F #txt
 As0 f11 actionTable 'out=in;
 ' #txt
@@ -97,11 +97,11 @@ As0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-As0 f11 84 240 24 32 -17 15 #rect
+As0 f11 83 243 26 26 -44 18 #rect
 As0 f6 109 160 256 160 #arcP
-As0 f9 108 256 260 256 #arcP
-As0 f10 547 243 26 26 0 12 #rect
-As0 f12 508 256 547 256 #arcP
+As0 f9 109 256 260 256 #arcP
+As0 f10 603 243 26 26 0 12 #rect
+As0 f12 508 256 603 256 #arcP
 >Proto As0 .type com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo.AmazonComprehendDemoData #txt
 >Proto As0 .processKind HTML_DIALOG #txt
 >Proto As0 -8 -8 16 16 16 26 #rect

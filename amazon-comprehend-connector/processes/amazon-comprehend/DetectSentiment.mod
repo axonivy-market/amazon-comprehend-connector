@@ -29,9 +29,9 @@ Dt0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Dt0 f0 80 52 32 24 -75 23 #rect
+Dt0 f0 81 49 30 30 -94 14 #rect
 Dt0 f0 res:/webContent/images/amazon-comprehend.png?small #fDecoratorIcon
-Dt0 f1 345 49 30 30 0 15 #rect
+Dt0 f1 385 49 30 30 0 15 #rect
 Dt0 f3 clientId 77574d12-8a1a-47ea-8165-da1bebde6fa6 #txt
 Dt0 f3 headers 'Accept=*/*;
 X-amz-target="Comprehend_20171127.DetectSentiment";
@@ -75,9 +75,9 @@ Dt0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Dt0 f3 168 42 128 44 -55 -7 #rect
-Dt0 f4 112 64 168 64 #arcP
-Dt0 f2 296 64 345 64 #arcP
+Dt0 f3 208 42 128 44 -55 -7 #rect
+Dt0 f4 111 64 208 64 #arcP
+Dt0 f2 336 64 385 64 #arcP
 >Proto Dt0 .type com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentData #txt
 >Proto Dt0 .processKind CALLABLE_SUB #txt
 >Proto Dt0 0 0 32 24 18 0 #rect

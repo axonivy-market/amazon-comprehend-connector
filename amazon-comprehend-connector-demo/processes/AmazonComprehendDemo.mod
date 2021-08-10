@@ -15,7 +15,7 @@ Ao0 @UserDialog f11 '' #zField
 Ao0 @PushWFArc f12 '' #zField
 Ao0 @PushWFArc f0 '' #zField
 >Proto Ao0 Ao0 AmazonComprehendDemo #zField
-Ao0 f6 440 64 32 32 0 15 #rect
+Ao0 f6 441 65 30 30 0 18 #rect
 Ao0 f10 outLink demo.ivp #txt
 Ao0 f10 inParamDecl '<> param;' #txt
 Ao0 f10 requestEnabled true #txt
@@ -43,9 +43,9 @@ Ao0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Ao0 f11 184 58 176 44 -82 -7 #rect
-Ao0 f12 103 80 184 80 #arcP
-Ao0 f0 360 80 440 80 #arcP
+Ao0 f11 164 56 216 48 -82 -7 #rect
+Ao0 f12 103 80 164 80 #arcP
+Ao0 f0 380 80 441 80 #arcP
 >Proto Ao0 .type com.axonivy.connector.amazon.comprehend.connector.demo.Data #txt
 >Proto Ao0 .processKind NORMAL #txt
 >Proto Ao0 0 0 32 24 18 0 #rect
