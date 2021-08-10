@@ -1,0 +1,12 @@
+AmazonComprehendDemoData #class
+com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo #namespace
+languageCode String #field
+languageCode PERSISTENT #fieldModifier
+text String #field
+text PERSISTENT #fieldModifier
+detectEntities com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse #field
+detectEntities PERSISTENT #fieldModifier
+detectSentiment com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse #field
+detectSentiment PERSISTENT #fieldModifier
+detection String #field
+detection PERSISTENT #fieldModifier

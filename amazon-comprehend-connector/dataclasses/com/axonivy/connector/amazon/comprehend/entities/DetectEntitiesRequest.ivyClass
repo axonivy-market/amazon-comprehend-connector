@@ -1,0 +1,6 @@
+DetectEntitiesRequest #class
+com.axonivy.connector.amazon.comprehend.entities #namespace
+languageCode String #field
+languageCode PERSISTENT #fieldModifier
+text String #field
+text PERSISTENT #fieldModifier
