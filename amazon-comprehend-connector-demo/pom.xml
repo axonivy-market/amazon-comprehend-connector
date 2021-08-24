@@ -16,7 +16,7 @@
     <dependency>
       <groupId>com.axonivy.connector.amazon.comprehend</groupId>
       <artifactId>amazon-comprehend-connector</artifactId>
-      <version>9.2.1-SNAPSHOT</version>
+      <version>${project.version}</version>
       <type>iar</type>
     </dependency>
   </dependencies>
