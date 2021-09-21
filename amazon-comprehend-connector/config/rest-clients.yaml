@@ -13,3 +13,5 @@ RestClients:
     Properties:
       regionName: us-east-2
       serviceName: comprehend
+      accessKey: ${ivy.var.Amazon.Comprehend.AccessKey}
+      secretKey: ${ivy.var.Amazon.Comprehend.SecretKey}
