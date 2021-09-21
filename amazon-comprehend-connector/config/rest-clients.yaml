@@ -1,0 +1,15 @@
+RestClients:
+  #Amazon Comprehend is a natural-language processing (NLP) service
+  #that uses machine learning to uncover information in unstructured data.
+  #Instead of combing through documents, the process is simplified and
+  #unseen information is easier to understand.
+  amazon-comprehend:
+    UUID: 77574d12-8a1a-47ea-8165-da1bebde6fa6
+    Url: https://comprehend.us-east-2.amazonaws.com/
+    Icon: res:/webContent/images/amazon-comprehend.png
+    Features:
+    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+    - com.axonivy.connector.aws.authentication.Aws4AuthenticationFeature
+    Properties:
+      regionName: us-east-2
+      serviceName: comprehend

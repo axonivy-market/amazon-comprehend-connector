@@ -1,5 +1,5 @@
 [Ivy]
-17B2AA09321CBAD2 9.2.0 #module
+17B2AA09321CBAD2 9.3.0 #module
 >Proto >Proto Collection #zClass
 Dt0 DetectSentiment Big #zClass
 Dt0 B #cInfo
