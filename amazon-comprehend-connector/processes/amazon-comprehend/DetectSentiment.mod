@@ -36,9 +36,6 @@ Dt0 f3 clientId 77574d12-8a1a-47ea-8165-da1bebde6fa6 #txt
 Dt0 f3 headers 'Accept=*/*;
 X-amz-target="Comprehend_20171127.DetectSentiment";
 ' #txt
-Dt0 f3 properties 'accessKey=ivy.var.Amazon_Comprehend_AccessKey;
-secretKey=ivy.var.Amazon_Comprehend_SecretKey;
-' #txt
 Dt0 f3 method POST #txt
 Dt0 f3 bodyInputType RAW #txt
 Dt0 f3 bodyMediaType application/x-amz-json-1.1 #txt
