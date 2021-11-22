@@ -9,6 +9,7 @@
     <module>amazon-comprehend-connector</module>
     <module>amazon-comprehend-connector-demo</module>
     <module>amazon-comprehend-connector-test</module>
+    <module>amazon-comprehend-connector-product</module>
   </modules>
 
   <scm>
