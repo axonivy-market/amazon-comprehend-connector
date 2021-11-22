@@ -32,3 +32,10 @@ jobs:
         files: |
           */target/*-reports/*.xml
           !*/target/*-reports/failsafe-summary.xml
+
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: |
+          **/*.iar
+          **/*.zip
