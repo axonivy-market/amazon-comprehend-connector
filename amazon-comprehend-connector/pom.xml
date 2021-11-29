@@ -22,13 +22,6 @@
 		</repository>
 	</repositories>
 
-	<distributionManagement>
-		<repository>
-		  <id>github</id>
-		  <url>https://maven.pkg.github.com/axonivy-market/amazon-comprehend-connector</url>
-		</repository>
-	</distributionManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.axonivy.connector.aws</groupId>
