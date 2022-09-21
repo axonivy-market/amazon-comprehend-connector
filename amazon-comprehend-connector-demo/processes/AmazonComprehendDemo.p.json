@@ -1,0 +1,38 @@
+{
+  "format" : "9.4.20",
+  "id" : "17B2A0940C6CF31C",
+  "data" : "com.axonivy.connector.amazon.comprehend.connector.demo.Data",
+  "elements" : [ {
+      "id" : "f6",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 456, "y" : 80 }
+      }
+    }, {
+      "id" : "f10",
+      "type" : "RequestStart",
+      "name" : "demo.ivp",
+      "config" : {
+        "callSignature" : "demo",
+        "outLink" : "demo.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 88, "y" : 80 },
+        "labelOffset" : { "x" : 11, "y" : 37 }
+      },
+      "connect" : { "id" : "f12", "to" : "f11" }
+    }, {
+      "id" : "f11",
+      "type" : "DialogCall",
+      "name" : "AmazonComprehendDemo",
+      "config" : {
+        "dialogId" : "com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo",
+        "startMethod" : "start()"
+      },
+      "visual" : {
+        "at" : { "x" : 272, "y" : 80 },
+        "size" : { "width" : 216, "height" : 48 }
+      },
+      "connect" : { "id" : "f0", "to" : "f6" }
+    } ]
+}
