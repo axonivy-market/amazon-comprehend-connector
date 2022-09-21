@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.amazon.comprehend</groupId>
   <artifactId>amazon-comprehend-connector-test</artifactId>
-  <version>9.3.1-SNAPSHOT</version>
+  <version>9.4.0</version>
   <packaging>iar-integration-test</packaging>
 
   <dependencies>
@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.axonivy.ivy.webtest</groupId>
       <artifactId>web-tester</artifactId>
-      <version>9.3.0</version>
+      <version>9.4.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

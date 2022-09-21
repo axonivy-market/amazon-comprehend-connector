@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.axonivy.connector.amazon.comprehend</groupId>
 	<artifactId>amazon-comprehend-connector</artifactId>
-	<version>9.3.1-SNAPSHOT</version>
+	<version>9.4.0</version>
 	<packaging>iar</packaging>
 	<build>
 		<plugins>
@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>com.axonivy.connector.aws</groupId>
 			<artifactId>amazon-aws4-authenticator</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.3</version>
 		</dependency>
 	</dependencies>
 </project>
