@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.amazon.comprehend</groupId>
   <artifactId>amazon-comprehend-connector-test</artifactId>
   <version>9.4.0</version>
   <packaging>iar-integration-test</packaging>
-
   <dependencies>
     <dependency>
       <groupId>com.axonivy.connector.amazon.comprehend</groupId>
@@ -25,23 +26,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <testSourceDirectory>src_test</testSourceDirectory>
-    <plugins>
-      <plugin>
-        <groupId>com.axonivy.ivy.ci</groupId>
-        <artifactId>project-build-plugin</artifactId>
-        <version>9.3.1</version>
-        <extensions>true</extensions>
-        <configuration>
-          <additionalVmOptions>
-        		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}
-        		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}
-        	</additionalVmOptions>
-        </configuration>
-      </plugin>
-    </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -53,5 +39,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.axonivy.ivy.ci</groupId>
+        <artifactId>project-build-plugin</artifactId>
+        <version>9.4.1</version>
+        <extensions>true</extensions>
+        <configuration>
+          <additionalVmOptions>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}
+        		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}</additionalVmOptions>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
