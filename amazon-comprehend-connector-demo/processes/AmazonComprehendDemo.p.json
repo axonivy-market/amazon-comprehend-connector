@@ -1,7 +1,9 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17B2A0940C6CF31C",
-  "data" : "com.axonivy.connector.amazon.comprehend.connector.demo.Data",
+  "config" : {
+    "data" : "com.axonivy.connector.amazon.comprehend.connector.demo.Data"
+  },
   "elements" : [ {
       "id" : "f6",
       "type" : "TaskEnd",

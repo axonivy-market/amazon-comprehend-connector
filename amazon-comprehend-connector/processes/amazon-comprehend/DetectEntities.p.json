@@ -1,8 +1,10 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17B2AD57F26F3631",
-  "data" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesData",
   "kind" : "CALLABLE_SUB",
+  "config" : {
+    "data" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesData"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
