@@ -1,15 +1,24 @@
-Axon Ivy’s [Amazon Comprehend API](https://aws.amazon.com/comprehend/) helps you to accelerate process automation
-initiatives by introducing Natural Language Processing (NLP) and Machine
-Learning (ML) to your process work. Amazon Comprehend discovers insights and
-relationships in text. This connector:
+### Accelerate Process Automation with NLP and ML
 
-- Is based on a freemium pricing model by AWS.
-- Provides Keyphrase Extraction, Sentiment Analysis, Entity Recognition, Topic
-  Modeling, and Language Detection APIs
-- Identifies critical elements in data, including references to language,
-  people, and places, and the text files can be categorized by relevant topics.
-- Supports you with an easy-to-copy demo implementation to reduce your
-  integration effort.
+Axon Ivy’s [Amazon Comprehend API](https://aws.amazon.com/comprehend/) connector enables you to enhance your process automation initiatives by leveraging the power of Natural Language Processing (NLP) and Machine Learning (ML). This connector seamlessly integrates Amazon Comprehend's capabilities into your process work, allowing you to discover valuable insights and relationships hidden within text data.
+
+Key features and benefits:
+
+- **Freemium Pricing Model**: The connector is based on AWS's freemium pricing model, providing cost-effective access to advanced NLP and ML functionalities.
+
+- **Comprehensive NLP APIs**: Gain access to a wide range of APIs, including Keyphrase Extraction, Sentiment Analysis, Entity Recognition, Topic Modeling, and Language Detection. These APIs empower you to extract meaningful information from unstructured text data.
+
+- **Identify Critical Elements**: Amazon Comprehend helps you identify crucial elements within your data, such as references to languages, people, and places. This enables you to gain a deeper understanding of your text-based information and make informed decisions.
+
+- **Text Categorization**: Automatically categorize your text files based on relevant topics, making it easier to organize and analyze large volumes of data.
+
+- **Demo Implementation**: To minimize your integration effort, Axon Ivy provides an easy-to-copy demo implementation. This sample code serves as a starting point, allowing you to quickly incorporate the Amazon Comprehend API into your own processes.
+
+### How does it differ from ChatGPT?
+If your primary goal is to perform **specific NLP tasks** like sentiment analysis or entity recognition on large volumes of text data, AWS Comprehend is a suitable choice. It offers pre-trained models, scalability, and **integration with the AWS ecosystem**. However, if you require a more **versatile language model** for open-ended conversations or generating human-like text, ChatGPT may be a better fit.
+
+
+
 
 ## Demo
 
