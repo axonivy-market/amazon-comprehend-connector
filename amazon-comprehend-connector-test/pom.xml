@@ -67,8 +67,10 @@
         <version>${project.build.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <additionalVmOptions>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}
-        		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}</additionalVmOptions>
+          <additionalVmArgs>
+            <additionalVmArg>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}</additionalVmArg>
+            <additionalVmArg>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}</additionalVmArg>
+          </additionalVmArgs>
         </configuration>
       </plugin>
     </plugins>
