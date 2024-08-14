@@ -38,7 +38,7 @@
 				<c:if test="#{data.detection == 'entities'}">
 					<div class="card">
 						<h1>Entity Detection</h1>
-				        <p:dataTable id="entitiesTable" var="entity" value="#{data.detectEntities.entities}">
+				        <p:dataTable id="entitiesTable" var="entity" value="#{data.detectEntities.entities}" lazy="false">
 				            <p:column headerText="Type">
 				                <h:outputText value="#{entity.type}" />
 				            </p:column>
