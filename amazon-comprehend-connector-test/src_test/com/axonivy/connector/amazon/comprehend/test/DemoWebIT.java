@@ -11,6 +11,8 @@ import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.axonivy.ivy.webtest.primeui.PrimeUi;
 import com.codeborne.selenide.Condition;
 
+import ch.ivyteam.ivy.environment.Ivy;
+
 @IvyWebTest
 class DemoWebIT {
 	
