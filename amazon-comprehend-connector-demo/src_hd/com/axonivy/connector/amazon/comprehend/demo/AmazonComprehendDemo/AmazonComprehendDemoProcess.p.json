@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/11.3.0/process.json",
   "id" : "17B2B1D02955EE2C",
   "kind" : "HTML_DIALOG",
   "config" : {
@@ -10,7 +10,7 @@
       "type" : "HtmlDialogStart",
       "name" : "start()",
       "config" : {
-        "callSignature" : "start",
+        "signature" : "start",
         "input" : {
           "map" : {
             "out.languageCode" : "\"en\"",
@@ -23,7 +23,9 @@
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 8, "y" : 35 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
@@ -41,27 +43,26 @@
         "at" : { "x" : 96, "y" : 160 },
         "labelOffset" : { "x" : 20, "y" : 36 }
       },
-      "connect" : { "id" : "f6", "to" : "f4" }
+      "connect" : [
+        { "id" : "f6", "to" : "f4" }
+      ]
     }, {
       "id" : "f7",
       "type" : "SubProcessCall",
       "name" : "amazon-comprehend/DetectEntities",
       "config" : {
         "processCall" : "amazon-comprehend/DetectEntities:call(com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest)",
+        "call" : {
+          "map" : {
+            "param.request.languageCode" : "in.languageCode",
+            "param.request.text" : "in.text"
+          }
+        },
         "output" : {
           "map" : {
             "out" : "in",
             "out.detectEntities" : "result.response",
             "out.detection" : "\"entities\""
-          }
-        },
-        "call" : {
-          "params" : [
-            { "name" : "request", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest" }
-          ],
-          "map" : {
-            "param.request.languageCode" : "in.languageCode",
-            "param.request.text" : "in.text"
           }
         }
       },
@@ -69,27 +70,26 @@
         "at" : { "x" : 384, "y" : 256 },
         "size" : { "width" : 248, "height" : 48 }
       },
-      "connect" : { "id" : "f12", "to" : "f10" }
+      "connect" : [
+        { "id" : "f12", "to" : "f10" }
+      ]
     }, {
       "id" : "f4",
       "type" : "SubProcessCall",
       "name" : "amazon-comprehend/DetectSentiment",
       "config" : {
         "processCall" : "amazon-comprehend/DetectSentiment:call(com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentRequest)",
+        "call" : {
+          "map" : {
+            "param.detectSentiment.languageCode" : "in.languageCode",
+            "param.detectSentiment.text" : "in.text"
+          }
+        },
         "output" : {
           "map" : {
             "out" : "in",
             "out.detectSentiment" : "result.response",
             "out.detection" : "\"sentiment\""
-          }
-        },
-        "call" : {
-          "params" : [
-            { "name" : "detectSentiment", "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentRequest" }
-          ],
-          "map" : {
-            "param.detectSentiment.languageCode" : "in.languageCode",
-            "param.detectSentiment.text" : "in.text"
           }
         }
       },
@@ -97,7 +97,9 @@
         "at" : { "x" : 384, "y" : 160 },
         "size" : { "width" : 256, "height" : 48 }
       },
-      "connect" : { "id" : "f8", "to" : "f5" }
+      "connect" : [
+        { "id" : "f8", "to" : "f5" }
+      ]
     }, {
       "id" : "f5",
       "type" : "HtmlDialogEnd",
@@ -115,7 +117,9 @@
         "at" : { "x" : 96, "y" : 256 },
         "labelOffset" : { "x" : 8, "y" : 38 }
       },
-      "connect" : { "id" : "f9", "to" : "f7" }
+      "connect" : [
+        { "id" : "f9", "to" : "f7" }
+      ]
     }, {
       "id" : "f10",
       "type" : "HtmlDialogEnd",

@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/11.3.0/process.json",
   "id" : "17B2AD57F26F3631",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -10,10 +10,10 @@
       "type" : "CallSubStart",
       "name" : "call(DetectEntitiesRequest)",
       "config" : {
-        "callSignature" : "call",
+        "signature" : "call",
         "input" : {
           "params" : [
-            { "name" : "request", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest" }
+            { "name" : "request", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest", "desc" : "" }
           ],
           "map" : {
             "out.request" : "param.request"
@@ -21,7 +21,7 @@
         },
         "result" : {
           "params" : [
-            { "name" : "response", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse" }
+            { "name" : "response", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse", "desc" : "" }
           ],
           "map" : {
             "result.response" : "in.response"
@@ -33,7 +33,9 @@
         "labelOffset" : { "x" : 28, "y" : 47 },
         "icon" : "res:/webContent/images/amazon-comprehend.png?small"
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -45,60 +47,69 @@
       "type" : "RestClientCall",
       "name" : "Detect Entities",
       "config" : {
-        "bodyRaw" : [
-          "{",
-          "    \"Text\": \"<%=in.request.text%>\",",
-          "    \"LanguageCode\": \"<%=in.request.languageCode%>\"",
-          "}"
-        ],
-        "headers" : {
-          "Accept" : "*/*",
-          "X-amz-target" : "\"Comprehend_20171127.DetectEntities\""
-        },
-        "bodyObjectMapping" : {
-          "param.languageCode" : "\"en\"",
-          "param.text" : "\"Amazon.com, Inc. is located in Seattle, WA and was founded July 5th, 1994 by Jeff Bezos, allowing customers to buy everything from books to blenders. Seattle is north of Portland and south of Vancouver, BC. Other notable Seattle - based companies are Starbucks and Boeing.\""
-        },
-        "clientId" : "77574d12-8a1a-47ea-8165-da1bebde6fa6",
         "method" : "POST",
-        "statusErrorCode" : "ivy:error:rest:client",
-        "bodyObjectType" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentiment",
-        "bodyInputType" : "RAW",
-        "responseCode" : [
-          "import com.axonivy.connector.amazon.comprehend.entities.Entity;",
-          "import java.util.Iterator;",
-          "import com.fasterxml.jackson.databind.ObjectMapper;",
-          "import com.fasterxml.jackson.databind.JsonNode;",
-          "",
-          "ObjectMapper mapper = new ObjectMapper();",
-          "JsonNode actualObj = mapper.readTree(result);",
-          "",
-          " for (JsonNode jsonNode : actualObj.get(\"Entities\")) {",
-          "Entity ent = new Entity();",
-          "ent.type = jsonNode.get(\"Type\").asText();",
-          "ent.text = jsonNode.get(\"Text\").asText();",
-          "ent.score = jsonNode.get(\"Score\").asDouble();",
-          "ent.beginOffset = jsonNode.get(\"BeginOffset\").asInt();",
-          "ent.endOffset = jsonNode.get(\"EndOffset\").asInt();",
-          "out.response.entities.add(ent);    ",
-          "",
-          "      }",
-          "",
-          "//out.response.sentiment = actualObj.get(\"Sentiment\").textValue();",
-          "",
-          "//JsonNode sentimentScoreNode = actualObj.get(\"SentimentScore\");",
-          "//out.response.negative = sentimentScoreNode.get(\"Negative\").doubleValue();",
-          "//out.response.positive = sentimentScoreNode.get(\"Positive\").doubleValue();",
-          "//out.response.mixed = sentimentScoreNode.get(\"Mixed\").doubleValue();",
-          "//out.response.neutral = sentimentScoreNode.get(\"Neutral\").doubleValue();"
-        ],
-        "clientErrorCode" : "ivy:error:rest:client",
-        "resultType" : "java.lang.String",
-        "bodyMediaType" : "application/x-amz-json-1.1"
+        "target" : {
+          "clientId" : "77574d12-8a1a-47ea-8165-da1bebde6fa6",
+          "headers" : {
+            "X-amz-target" : "\"Comprehend_20171127.DetectEntities\""
+          }
+        },
+        "body" : {
+          "type" : "RAW",
+          "mediaType" : "application/x-amz-json-1.1",
+          "raw" : [
+            "{",
+            "    \"Text\": \"<%=in.request.text%>\",",
+            "    \"LanguageCode\": \"<%=in.request.languageCode%>\"",
+            "}"
+          ],
+          "entity" : {
+            "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentiment",
+            "map" : {
+              "param.languageCode" : "\"en\"",
+              "param.text" : "\"Amazon.com, Inc. is located in Seattle, WA and was founded July 5th, 1994 by Jeff Bezos, allowing customers to buy everything from books to blenders. Seattle is north of Portland and south of Vancouver, BC. Other notable Seattle - based companies are Starbucks and Boeing.\""
+            }
+          }
+        },
+        "response" : {
+          "entity" : {
+            "type" : "java.lang.String",
+            "code" : [
+              "import com.axonivy.connector.amazon.comprehend.entities.Entity;",
+              "import java.util.Iterator;",
+              "import com.fasterxml.jackson.databind.ObjectMapper;",
+              "import com.fasterxml.jackson.databind.JsonNode;",
+              "",
+              "ObjectMapper mapper = new ObjectMapper();",
+              "JsonNode actualObj = mapper.readTree(result);",
+              "",
+              " for (JsonNode jsonNode : actualObj.get(\"Entities\")) {",
+              "Entity ent = new Entity();",
+              "ent.type = jsonNode.get(\"Type\").asText();",
+              "ent.text = jsonNode.get(\"Text\").asText();",
+              "ent.score = jsonNode.get(\"Score\").asDouble();",
+              "ent.beginOffset = jsonNode.get(\"BeginOffset\").asInt();",
+              "ent.endOffset = jsonNode.get(\"EndOffset\").asInt();",
+              "out.response.entities.add(ent);    ",
+              "",
+              "      }",
+              "",
+              "//out.response.sentiment = actualObj.get(\"Sentiment\").textValue();",
+              "",
+              "//JsonNode sentimentScoreNode = actualObj.get(\"SentimentScore\");",
+              "//out.response.negative = sentimentScoreNode.get(\"Negative\").doubleValue();",
+              "//out.response.positive = sentimentScoreNode.get(\"Positive\").doubleValue();",
+              "//out.response.mixed = sentimentScoreNode.get(\"Mixed\").doubleValue();",
+              "//out.response.neutral = sentimentScoreNode.get(\"Neutral\").doubleValue();"
+            ]
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 232, "y" : 64 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }
