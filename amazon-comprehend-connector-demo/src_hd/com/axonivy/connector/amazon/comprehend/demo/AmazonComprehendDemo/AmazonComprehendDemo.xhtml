@@ -13,9 +13,8 @@
 
 			<h:form id="form">
 				<p:messages />
-
-				<p:panelGrid columns="2" layout="grid"
-					styleClass="ui-panelgrid-blank"
+				
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
 					columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
 						ui-g-12 ui-md-9 ui-lg-4, 
 						ui-g-12 ui-md-3 ui-lg-2, 
@@ -30,78 +29,71 @@
 				<br />
 
 				<div>
-					<p:commandButton id="detectSentiment"
-						actionListener="#{logic.detectSentiment}" value="Detect Sentiment"
-						update="form" icon="ui-icon-check" />
-					<p:commandButton id="detectEntities"
-						actionListener="#{logic.detectEntities}" value="Detect Entities"
-						update="form" icon="ui-icon-check" />
+					<p:commandButton id="detectSentiment" actionListener="#{logic.detectSentiment}" value="Detect Sentiment" update="form" icon="ui-icon-check" />
+					<p:commandButton id="detectEntities" actionListener="#{logic.detectEntities}" value="Detect Entities" update="form" icon="ui-icon-check" />
 				</div>
 
 				<br />
-
+				
 				<c:if test="#{data.detection == 'entities'}">
 					<div class="card">
 						<h1>Entity Detection</h1>
-						<p:dataTable id="entitiesTable" var="entity"
-							value="#{data.detectEntities.entities}" lazy="false">
-							<p:column headerText="Type">
-								<h:outputText value="#{entity.type}" />
-							</p:column>
-
-							<p:column headerText="Text">
-								<h:outputText value="#{entity.text}" />
-							</p:column>
-
-							<p:column headerText="Score">
-								<h:outputText value="#{entity.score}">
-									<f:convertNumber type="percent" maxFractionDigits="1" />
-								</h:outputText>
-							</p:column>
-						</p:dataTable>
-					</div>
-				</c:if>
-
-				<c:if test="#{data.detection == 'sentiment'}">
+				        <p:dataTable id="entitiesTable" var="entity" value="#{data.detectEntities.entities}" lazy="false">
+				            <p:column headerText="Type">
+				                <h:outputText value="#{entity.type}" />
+				            </p:column>
+				
+				            <p:column headerText="Text">
+				                <h:outputText value="#{entity.text}" />
+				            </p:column>
+				
+				            <p:column headerText="Score">
+				                <h:outputText value="#{entity.score}">
+				                	<f:convertNumber type="percent" maxFractionDigits="1"/>
+				                </h:outputText>
+				            </p:column>			
+				        </p:dataTable>
+				    </div>
+			    </c:if>
+			    
+			    <c:if test="#{data.detection == 'sentiment'}">
 					<div class="card">
 						<h1>Sentiment Detection</h1>
-
-						<p:panelGrid columns="2" layout="grid"
-							styleClass="ui-panelgrid-blank"
+				        
+				        <p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
 							columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
 								ui-g-12 ui-md-9 ui-lg-4, 
 								ui-g-12 ui-md-3 ui-lg-2, 
 								ui-g-12 ui-md-9 ui-lg-4">
-							<h:outputLabel value="Sentiment" />
-							<h:outputText id="sentiment"
-								value="#{data.detectSentiment.sentiment}" />
-
-							<h:outputLabel value="Positive" />
-							<h:outputText value="#{data.detectSentiment.positive}">
-								<f:convertNumber type="percent" maxFractionDigits="1" />
-							</h:outputText>
-
-							<h:outputLabel value="Negative" />
-							<h:outputText value="#{data.detectSentiment.negative}">
-								<f:convertNumber type="percent" maxFractionDigits="1" />
-							</h:outputText>
-
-							<h:outputLabel value="Neutral" />
-							<h:outputText value="#{data.detectSentiment.neutral}">
-								<f:convertNumber type="percent" maxFractionDigits="1" />
-							</h:outputText>
-
-							<h:outputLabel value="Mixed" />
-							<h:outputText value="#{data.detectSentiment.mixed}">
-								<f:convertNumber type="percent" maxFractionDigits="1" />
-							</h:outputText>
-						</p:panelGrid>
-					</div>
-				</c:if>
+					        <h:outputLabel value="Sentiment" />
+					        <h:outputText id="sentiment" value="#{data.detectSentiment.sentiment}" />
+					        
+					        <h:outputLabel value="Positive" />
+					        <h:outputText value="#{data.detectSentiment.positive}">
+					        	<f:convertNumber type="percent" maxFractionDigits="1"/>
+					        </h:outputText>
+					        
+					        <h:outputLabel value="Negative" />
+					        <h:outputText value="#{data.detectSentiment.negative}">
+					        	<f:convertNumber type="percent" maxFractionDigits="1"/>
+					        </h:outputText>
+					        
+					        <h:outputLabel value="Neutral" />
+					        <h:outputText value="#{data.detectSentiment.neutral}">
+					        	<f:convertNumber type="percent" maxFractionDigits="1"/>
+					        </h:outputText>
+					        
+					        <h:outputLabel value="Mixed" />
+					        <h:outputText value="#{data.detectSentiment.mixed}">
+					        	<f:convertNumber type="percent" maxFractionDigits="1"/>
+					        </h:outputText>
+					    </p:panelGrid>
+				    </div>
+			    </c:if>
 			</h:form>
-
-
-
+			
+			
+			
 
 		</ui:define>
 	</ui:composition>

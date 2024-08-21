@@ -76,7 +76,6 @@
           "entity" : {
             "type" : "java.lang.String",
             "code" : [
-              "import ch.ivyteam.ivy.environment.Ivy;",
               "import com.axonivy.connector.amazon.comprehend.entities.Entity;",
               "import java.util.Iterator;",
               "import com.fasterxml.jackson.databind.ObjectMapper;",
@@ -85,12 +84,7 @@
               "ObjectMapper mapper = new ObjectMapper();",
               "JsonNode actualObj = mapper.readTree(result);",
               "",
-              "Ivy.log().info(\"abcdef\");",
-              "",
               " for (JsonNode jsonNode : actualObj.get(\"Entities\")) {",
-              "",
-              "Ivy.log().info(\"2222222\");",
-              "",
               "Entity ent = new Entity();",
               "ent.type = jsonNode.get(\"Type\").asText();",
               "ent.text = jsonNode.get(\"Text\").asText();",
