@@ -1,11 +1,9 @@
 Variables:
+
   Amazon.Comprehend:
+
     # Secret key to access amazon comprehend     
-    # [password]
     SecretKey: ""
+    
     # Access key to access amazon comprehend
-    # [password]
     AccessKey: ""
-    # Session token to access amazon comprehend
-    # [password]
-    SessionToken: ""

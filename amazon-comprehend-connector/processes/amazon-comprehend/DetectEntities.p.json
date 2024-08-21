@@ -51,8 +51,7 @@
         "target" : {
           "clientId" : "77574d12-8a1a-47ea-8165-da1bebde6fa6",
           "headers" : {
-            "X-amz-target" : "\"Comprehend_20171127.DetectEntities\"",
-            "X-amz-security-token" : "ivy.var.Amazon_Comprehend_SessionToken"
+            "X-amz-target" : "\"Comprehend_20171127.DetectEntities\""
           }
         },
         "body" : {
