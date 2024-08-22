@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/app/11.3.1/rest-clients.json
 RestClients:
   #Amazon Comprehend is a natural-language processing (NLP) service
   #that uses machine learning to uncover information in unstructured data.
@@ -10,6 +11,7 @@ RestClients:
     Features:
     - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
     - com.axonivy.connector.aws.authentication.Aws4AuthenticationFeature
+    - feature.AwsHeaderFeature
     Properties:
       regionName: us-east-2
       serviceName: comprehend
