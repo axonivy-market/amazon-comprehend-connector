@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/11.3.0/process.json",
   "id" : "17B2A0940C6CF31C",
   "config" : {
     "data" : "com.axonivy.connector.amazon.comprehend.connector.demo.Data"
@@ -15,26 +15,28 @@
       "type" : "RequestStart",
       "name" : "demo.ivp",
       "config" : {
-        "callSignature" : "demo",
-        "outLink" : "demo.ivp"
+        "signature" : "demo"
       },
       "visual" : {
         "at" : { "x" : 88, "y" : 80 },
         "labelOffset" : { "x" : 11, "y" : 37 }
       },
-      "connect" : { "id" : "f12", "to" : "f11" }
+      "connect" : [
+        { "id" : "f12", "to" : "f11" }
+      ]
     }, {
       "id" : "f11",
       "type" : "DialogCall",
       "name" : "AmazonComprehendDemo",
       "config" : {
-        "dialogId" : "com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo",
-        "startMethod" : "start()"
+        "dialog" : "com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo:start()"
       },
       "visual" : {
         "at" : { "x" : 272, "y" : 80 },
         "size" : { "width" : 216, "height" : 48 }
       },
-      "connect" : { "id" : "f0", "to" : "f6" }
+      "connect" : [
+        { "id" : "f0", "to" : "f6" }
+      ]
     } ]
 }
