@@ -6,8 +6,8 @@
   <version>11.3.2-SNAPSHOT</version>
   <packaging>iar-integration-test</packaging>
   <properties>
-    <project.build.plugin.version>11.3.0</project.build.plugin.version>
-    <tester.version>11.3.0</tester.version>
+    <project.build.plugin.version>11.4.0-SNAPSHOT</project.build.plugin.version>
+    <tester.version>11.4.0-SNAPSHOT</tester.version>
   </properties>
   <pluginRepositories>
     <pluginRepository>
@@ -67,8 +67,8 @@
         <version>${project.build.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <additionalVmOptions>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}
-        		-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}</additionalVmOptions>
+          <additionalVmArg>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.AccessKey=${aws.access.key}</additionalVmArg>
+          <additionalVmArg>-Divy.Applications.amazoncomprehendconnectortest.Variables.Amazon.Comprehend.SecretKey=${aws.secret.key}</additionalVmArg>
         </configuration>
       </plugin>
     </plugins>
