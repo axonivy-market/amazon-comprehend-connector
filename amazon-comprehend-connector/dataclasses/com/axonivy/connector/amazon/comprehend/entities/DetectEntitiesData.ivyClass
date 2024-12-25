@@ -1,6 +1,0 @@
-DetectEntitiesData #class
-com.axonivy.connector.amazon.comprehend.entities #namespace
-request com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest #field
-request PERSISTENT #fieldModifier
-response com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse #field
-response PERSISTENT #fieldModifier
