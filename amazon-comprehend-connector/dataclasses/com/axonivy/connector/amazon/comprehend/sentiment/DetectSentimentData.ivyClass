@@ -1,6 +1,0 @@
-DetectSentimentData #class
-com.axonivy.connector.amazon.comprehend.sentiment #namespace
-request com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentRequest #field
-request PERSISTENT #fieldModifier
-response com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse #field
-response PERSISTENT #fieldModifier

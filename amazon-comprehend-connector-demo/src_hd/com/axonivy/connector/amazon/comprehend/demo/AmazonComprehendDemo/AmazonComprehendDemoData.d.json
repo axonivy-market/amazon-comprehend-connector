@@ -1,0 +1,27 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "AmazonComprehendDemoData",
+  "namespace" : "com.axonivy.connector.amazon.comprehend.demo.AmazonComprehendDemo",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "languageCode",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "text",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "detectEntities",
+    "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "detectSentiment",
+    "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "detection",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}

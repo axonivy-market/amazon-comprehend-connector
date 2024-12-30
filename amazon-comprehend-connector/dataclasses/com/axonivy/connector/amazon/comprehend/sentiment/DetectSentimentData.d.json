@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "DetectSentimentData",
+  "namespace" : "com.axonivy.connector.amazon.comprehend.sentiment",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "request",
+    "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentRequest",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "response",
+    "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}

@@ -1,6 +1,0 @@
-DetectSentimentRequest #class
-com.axonivy.connector.amazon.comprehend.sentiment #namespace
-languageCode String #field
-languageCode PERSISTENT #fieldModifier
-text String #field
-text PERSISTENT #fieldModifier

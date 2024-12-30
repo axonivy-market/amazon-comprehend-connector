@@ -1,4 +1,0 @@
-DetectEntitiesResponse #class
-com.axonivy.connector.amazon.comprehend.entities #namespace
-entities java.util.List<com.axonivy.connector.amazon.comprehend.entities.Entity> #field
-entities PERSISTENT #fieldModifier
