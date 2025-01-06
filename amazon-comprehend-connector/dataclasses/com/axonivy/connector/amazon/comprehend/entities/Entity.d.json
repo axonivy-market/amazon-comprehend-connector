@@ -1,0 +1,27 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "Entity",
+  "namespace" : "com.axonivy.connector.amazon.comprehend.entities",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "score",
+    "type" : "Double",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "type",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "text",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "beginOffset",
+    "type" : "Integer",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "endOffset",
+    "type" : "Integer",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}
