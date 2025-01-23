@@ -12,6 +12,7 @@
     <module>amazon-comprehend-connector-test</module>
     <module>amazon-comprehend-connector-product</module>
     <module>amazon-comprehend-demo-app</module>
+    <module>amazon-comprehend-demo-app</module>
   </modules>
   <scm>
     <developerConnection>scm:git:https://github.com/axonivy-market/amazon-comprehend-connector.git</developerConnection>
