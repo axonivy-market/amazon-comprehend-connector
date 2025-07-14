@@ -3,6 +3,8 @@ package com.axonivy.connector.amazon.comprehend.test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
+import java.time.Duration;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -10,14 +12,16 @@ import com.axonivy.ivy.webtest.IvyWebTest;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.axonivy.ivy.webtest.primeui.PrimeUi;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 
 @IvyWebTest
 class DemoWebIT {
-	
+
 	@Test
 	void detectEntities() {
 		open(EngineUrl.createProcessUrl("amazon-comprehend-connector-demo/17B2A0940C6CF31C/demo.ivp"));
-
+		switchToIFrame();
 		var text = By.id("form:text");
 		$(text).clear();
 		$(text).sendKeys("Clemens Schiller from Austria wants to buy a big car.");
@@ -31,11 +35,16 @@ class DemoWebIT {
 	@Test
 	void detectSentiment() {
 		open(EngineUrl.createProcessUrl("amazon-comprehend-connector-demo/17B2A0940C6CF31C/demo.ivp"));
-
+		switchToIFrame();
 		var text = By.id("form:text");
 		$(text).clear();
 		$(text).sendKeys("This car looks really ugly!");
 		$(By.id("form:detectSentiment")).shouldBe(enabled).click();
 		$(By.id("form:sentiment")).shouldBe(Condition.text("NEGATIVE"));
+	}
+
+	private void switchToIFrame() {
+		SelenideElement iframe = $(By.tagName("iFrame")).shouldBe(visible, Duration.ofSeconds(300));
+		Selenide.switchTo().frame(iframe);
 	}
 }
