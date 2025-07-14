@@ -1,7 +1,8 @@
 package com.axonivy.connector.amazon.comprehend.test;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ import com.codeborne.selenide.Condition;
 
 @IvyWebTest
 class DemoWebIT {
-	
+
 	@Test
 	void detectEntities() {
 		open(EngineUrl.createProcessUrl("amazon-comprehend-connector-demo/17B2A0940C6CF31C/demo.ivp"));
@@ -27,7 +28,7 @@ class DemoWebIT {
 		PrimeUi.table(table).contains("PERSON");
 		PrimeUi.table(table).contains("Clemens Schiller");
 	}
-	
+
 	@Test
 	void detectSentiment() {
 		open(EngineUrl.createProcessUrl("amazon-comprehend-connector-demo/17B2A0940C6CF31C/demo.ivp"));
