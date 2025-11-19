@@ -1,87 +1,87 @@
-### Beschleunig Arbeitsgang Automatisierung mit NLP und #ML
+### Beschleunigen Sie die Prozessautomatisierung mit NLP und ML
 
-#Axon Efeus [#Amazon Fasst auf API](https://aws.amazon.com/comprehend/)
-Anschluss aktiviert du zu erweitern eure Arbeitsgang Automatisierung Initiativen
-#aushebeln mal die Kraft von Natural Sprache Verarbeitung (NLP) und Maschine
-#Lernen (#ML). Dieser Anschluss integriert #bruchlos #Amazon Fasst aufhat
-Fähigkeiten hinein eure Arbeitsgang Arbeit, erlaubend dir zu entdecken kostbare
-Einblicke und Beziehungen versteckt innerhalb Text #Daten.
+Mit dem [Amazon Comprehend API]-Konnektor von Axon Ivy können Sie Ihre
+Prozessautomatisierungsinitiativen verbessern, indem Sie die Leistungsfähigkeit
+von Natural Language Processing (NLP) und Machine Learning (ML) nutzen. Dieser
+Konnektor integriert die Funktionen von Amazon Comprehend nahtlos in Ihre
+Prozessarbeit, sodass Sie wertvolle Erkenntnisse und Zusammenhänge entdecken
+können, die in Textdaten verborgen sind.
 
-Wesentliche Charakterzüge und Nutzen:
+Wichtigste Funktionen und Vorteile:
 
-- **Freemium #Preisfindung Model**: Der Anschluss ist gegründet weiter AWSs
-  freemium #Preisfindung Model, versehend preisgünstigen Zugang zu
-  fortgeschritten NLP und #ML Funktionalitäten.
+- **Freemium-Preismodell**: Der Konnektor basiert auf dem Freemium-Preismodell
+  von AWS und bietet kostengünstigen Zugriff auf fortschrittliche NLP- und
+  ML-Funktionen.
 
-- **Umfassend NLP APIs**: Gewinn Zugang zu einem weiten Bereich von APIs,
-  #einschließen Keyphrase Gewinnung, Gefühl Auswertung, Entität Bestätigung,
-  Gegenstand #Modellieren, und Sprache Entdeckung. Diese APIs ermächtigen dir zu
-  gewinnen sinnvolle Auskunft von unstructured Text #Daten.
+- **Umfassende NLP-APIs**: Erhalten Sie Zugriff auf eine Vielzahl von APIs,
+  darunter Keyphrase Extraction, Sentiment Analysis, Entity Recognition, Topic
+  Modeling und Language Detection. Mit diesen APIs können Sie aussagekräftige
+  Informationen aus unstrukturierten Textdaten extrahieren.
 
-- **Identifizieren Kritische Elemente**: #Amazon Fasst auf hilft du
-  identifizierst unerlässliche Elemente innerhalb #eure #Daten, wie Verweise zu
-  Sprachen, Leute, und Orte. Dies aktiviert du zu gewinnen ein tieferes
-  #begreifend von eurem Text-basisbezogene Auskunft und Herstellung informierte
-  Entscheide.
+- **Identifizieren Sie wichtige Elemente**: Amazon Comprehend hilft Ihnen dabei,
+  wichtige Elemente in Ihren Daten zu identifizieren, wie beispielsweise
+  Verweise auf Sprachen, Personen und Orte. So können Sie ein tieferes
+  Verständnis Ihrer textbasierten Informationen gewinnen und fundierte
+  Entscheidungen treffen.
 
-- **Text #Kategorisierung**: Automatisch #kategorisieren eure Text Dateien
-  gegründet auf relevant Gegenstände, machend ihm leichter zu organisieren und
-  analysieren große Inhalte von Daten.
+- **Textkategorisierung**: Kategorisieren Sie Ihre Textdateien automatisch
+  anhand relevanter Themen, um die Organisation und Analyse großer Datenmengen
+  zu vereinfachen.
 
-- **Demo Ausführung**: Zu minimieren eure Integration Anstrengung, #Axon #Ivy
-  versieht ein leichtes-zu-Kopie Demo Ausführung. Dieser Sample Code serviert
-  wie ein startend Punkt, erlaubend dir zu schnell verleiben #der #Amazon Fasst
-  auf API hinein eure eigenen Arbeitsgänge.
+- **Demo-Implementierung**: Um Ihren Integrationsaufwand zu minimieren, bietet
+  Axon Ivy eine einfach zu kopierende Demo-Implementierung. Dieser Beispielcode
+  dient als Ausgangspunkt, damit Sie die Amazon Comprehend API schnell in Ihre
+  eigenen Prozesse integrieren können.
 
-### Wie #abweichen es von ChatGPT?
-Ob eure primäres Tor ist zu aufführen **spezifisch NLP Tasks** gleichnamige
-Gefühl Auswertung oder Entität Bestätigung auf groß Inhalte von Text #Daten, AWS
-Fasst auf ist eine passende Auswahl. Es bietet an pre-ausgebildete Models,
-#Skalierbarkeit, und **Integration mit die AWS Ökosystem**. Indes, ob du
-bedürfst eine More **vielseitiges Sprache Model** für offen-endete
-Unterhaltungen oder generierend menschlich-gleichnamigen Text, ChatGPT darf sein
-eine bessere Passform.
+### Wie unterscheidet es sich von ChatGPT?
+** **Wenn Ihr primäres Ziel darin besteht, bestimmte NLP-Aufgaben** wie
+Sentimentanalyse oder Entitätserkennung an großen Textdatenmengen durchzuführen,
+ist AWS Comprehend eine geeignete Wahl. Es bietet vortrainierte Modelle,
+Skalierbarkeit und **Integration in das AWS-Ökosystem**. Wenn Sie jedoch ein
+vielseitigeres Sprachmodell** für offene Gespräche oder die Generierung
+menschenähnlicher Texte benötigen, ist ChatGPT möglicherweise besser geeignet.
 
 
 
 
 ## Demo
 
-### Gefühl Entdeckung
+### Sentimenterkennung
 
-1. Tipp irgendwelchen Text du magst hinein das Text Feld gleichnamig: _Ich
-   eigentlich gleichnamig jenes Auto_.
-2. Klick Herausfinden weiter Gefühl
-3. #Amazon Fasst auf will herausfinden als das Gefühl dir.
+1. Typen Sie einen beliebigen Text in das Textfeld ein, z. B.: _Ich mag dieses
+   Auto wirklich sehr_.
+2. Klicken Sie auf „Stimmung erkennen“.
+3. Amazon Comprehend erkennt die Stimmung für Sie.
 
-![Demo-verarbeite](images/comprehend-demo-sentiment.png)
+![demo-process](images/comprehend-demo-sentiment.png)
 
-### Entitäten Entdeckung
+### Entitätenerkennung
 
-1. Tipp irgendwelchen Text du magst hinein das Text Feld gleichnamig: _#John
-   Smith ist von #Schweiz_.
-2. Klick Herausfinden weiter Entitäten
-3. #Amazon Fasst auf will herausfinden als die Entitäten dir.
+1. Typ einen beliebigen Text in das Textfeld ein, z. B.: _John Smith kommt aus
+   der Schweiz_.
+2. Klicken Sie auf „Entitäten erkennen“.
+3. Amazon Comprehend erkennt die Entitäten für Sie.
 
-![Demo-verarbeite](images/comprehend-demo-entities.png)
+![demo-process](images/comprehend-demo-entities.png)
 
 
 ## Einrichtung
 
-1. Zuerst brauchst du zu schaffen einen geheimen Schlüssel und einen Zugang
-   Schlüssel für #Amazon. Geh zu https://aws.amazon.com
+1. Zunächst müssen Sie einen geheimen Schlüssel und einen Zugriffsschlüssel für
+   Amazon erstellen. Gehen Sie dazu auf https://aws.amazon.com.
 
-2. Anmeldung oder schaffen ein neues Konto.
+2. Melden Sie sich an oder erstellen Sie ein neues Konto.
 
-3. Klick auf Meine Sicherheit #Berechtigungsnachweis:
+3. Klicken Sie auf „Meine Sicherheitsanmeldedaten“:
 
-![Demo-verarbeite](images/comprehend-setup-credentials.png)
+![demo-process](images/comprehend-setup-credentials.png)
 
-4. Schaff einen neuen Zugang Schlüssel und ein neues Geheimnis Schlüssel.
+4. Erstellen Sie einen neuen Zugriffsschlüssel und einen neuen geheimen
+   Schlüssel.
 
-![Demo-verarbeite](images/comprehend-setup-keys.png)
+![demo-process](images/comprehend-setup-keys.png)
 
-5. Konfigurier die folgenden Variablen in eurem Projekt:
+5. Konfigurieren Sie die folgenden Variablen in Ihrem Projekt:
 
 ```
 Variables:
