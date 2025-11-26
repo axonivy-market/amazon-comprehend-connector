@@ -65,7 +65,7 @@ menschenähnlicher Texte benötigen, ist ChatGPT möglicherweise besser geeignet
 ![demo-process](images/comprehend-demo-entities.png)
 
 
-## Einrichtung
+## Setup
 
 1. Zunächst müssen Sie einen geheimen Schlüssel und einen Zugriffsschlüssel für
    Amazon erstellen. Gehen Sie dazu auf https://aws.amazon.com.
