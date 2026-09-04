@@ -1,27 +1,27 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
-  "id" : "17B2AA09321CBAD2",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process-2.json",
+  "id" : "17B2AD57F26F3631",
   "kind" : "CALLABLE_SUB",
   "config" : {
-    "data" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentData"
+    "data" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesData"
   },
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
-      "name" : "call(DetectSentimentRequest)",
+      "name" : "call(DetectEntitiesRequest)",
       "config" : {
         "signature" : "call",
         "input" : {
           "params" : [
-            { "name" : "detectSentiment", "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentRequest", "desc" : "" }
+            { "name" : "request", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesRequest", "desc" : "" }
           ],
           "map" : {
-            "out.request" : "param.detectSentiment"
+            "out.request" : "param.request"
           }
         },
         "result" : {
           "params" : [
-            { "name" : "response", "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse", "desc" : "" }
+            { "name" : "response", "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse", "desc" : "" }
           ],
           "map" : {
             "result.response" : "in.response"
@@ -30,7 +30,7 @@
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
-        "labelOffset" : { "x" : 8, "y" : 34 },
+        "labelOffset" : { "x" : 28, "y" : 47 },
         "icon" : "res:/webContent/images/amazon-comprehend.png"
       },
       "connect" : [
@@ -40,18 +40,18 @@
       "id" : "f1",
       "type" : "CallSubEnd",
       "visual" : {
-        "at" : { "x" : 400, "y" : 64 }
+        "at" : { "x" : 352, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "RestClientCall",
-      "name" : "Detect Sentiment",
+      "name" : "Detect Entities",
       "config" : {
         "method" : "POST",
         "target" : {
           "clientId" : "amazon-comprehend",
           "headers" : {
-            "X-amz-target" : "\"Comprehend_20171127.DetectSentiment\""
+            "X-amz-target" : "\"Comprehend_20171127.DetectEntities\""
           }
         },
         "body" : {
@@ -75,26 +75,38 @@
           "entity" : {
             "type" : "java.lang.String",
             "code" : [
+              "import com.axonivy.connector.amazon.comprehend.entities.Entity;",
+              "import java.util.Iterator;",
               "import com.fasterxml.jackson.databind.ObjectMapper;",
-              "import com.fasterxml.jackson.databind.JsonNode;",
+              "import tools.jackson.databind.JsonNode;",
               "",
               "ObjectMapper mapper = new ObjectMapper();",
               "JsonNode actualObj = mapper.readTree(result);",
               "",
-              "out.response.sentiment = actualObj.get(\"Sentiment\").textValue();",
+              " for (JsonNode jsonNode : actualObj.get(\"Entities\")) {",
+              "Entity ent = new Entity();",
+              "ent.type = jsonNode.get(\"Type\").asText();",
+              "ent.text = jsonNode.get(\"Text\").asText();",
+              "ent.score = jsonNode.get(\"Score\").asDouble();",
+              "ent.beginOffset = jsonNode.get(\"BeginOffset\").asInt();",
+              "ent.endOffset = jsonNode.get(\"EndOffset\").asInt();",
+              "out.response.entities.add(ent);    ",
               "",
-              "JsonNode sentimentScoreNode = actualObj.get(\"SentimentScore\");",
-              "out.response.negative = sentimentScoreNode.get(\"Negative\").doubleValue();",
-              "out.response.positive = sentimentScoreNode.get(\"Positive\").doubleValue();",
-              "out.response.mixed = sentimentScoreNode.get(\"Mixed\").doubleValue();",
-              "out.response.neutral = sentimentScoreNode.get(\"Neutral\").doubleValue();"
+              "      }",
+              "",
+              "//out.response.sentiment = actualObj.get(\"Sentiment\").textValue();",
+              "",
+              "//JsonNode sentimentScoreNode = actualObj.get(\"SentimentScore\");",
+              "//out.response.negative = sentimentScoreNode.get(\"Negative\").doubleValue();",
+              "//out.response.positive = sentimentScoreNode.get(\"Positive\").doubleValue();",
+              "//out.response.mixed = sentimentScoreNode.get(\"Mixed\").doubleValue();",
+              "//out.response.neutral = sentimentScoreNode.get(\"Neutral\").doubleValue();"
             ]
           }
         }
       },
       "visual" : {
-        "at" : { "x" : 272, "y" : 64 },
-        "size" : { "width" : 128 }
+        "at" : { "x" : 232, "y" : 64 }
       },
       "connect" : [
         { "id" : "f2", "to" : "f1" }
