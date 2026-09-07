@@ -6,22 +6,22 @@
   "fields" : [ {
     "name" : "languageCode",
     "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "modifiers" : [ ]
   }, {
     "name" : "text",
     "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "modifiers" : [ ]
   }, {
     "name" : "detectEntities",
     "type" : "com.axonivy.connector.amazon.comprehend.entities.DetectEntitiesResponse",
-    "modifiers" : [ "PERSISTENT" ]
+    "modifiers" : [ ]
   }, {
     "name" : "detectSentiment",
     "type" : "com.axonivy.connector.amazon.comprehend.sentiment.DetectSentimentResponse",
-    "modifiers" : [ "PERSISTENT" ]
+    "modifiers" : [ ]
   }, {
     "name" : "detection",
     "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "modifiers" : [ ]
   } ]
 }
