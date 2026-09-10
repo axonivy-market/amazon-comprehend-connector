@@ -8,3 +8,5 @@ Variables:
       AccessKey: ""
       # Session token to access amazon comprehend
       SessionToken: ""
+      # A region e.g. 'us-east-2'.
+      Region: eu-central-1

@@ -3,11 +3,13 @@ Variables:
   Amazon:
     Comprehend:
       # Secret key to access amazon comprehend
-      # [password]
-      SecretKey: ""
+      #[password]
+      SecretKey: ${decrypt:}
       # Access key to access amazon comprehend
-      # [password]
-      AccessKey: ""
+      #[password]
+      AccessKey: ${decrypt:}
       # Session token to access amazon comprehend
-      # [password]
-      SessionToken: ""
+      #[password]
+      SessionToken: ${decrypt:}
+      # A region e.g. 'us-east-2'.
+      Region: ""

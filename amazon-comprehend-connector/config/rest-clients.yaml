@@ -6,7 +6,7 @@ RestClients:
   #unseen information is easier to understand.
   amazon-comprehend:
     Name: amazon-comprehend
-    Url: https://comprehend.us-east-2.amazonaws.com/
+    Url: https://comprehend.{REGION}.amazonaws.com/
     Icon: res:/webContent/images/amazon-comprehend.png
     Features:
       - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
@@ -17,4 +17,4 @@ RestClients:
       serviceName: comprehend
       accessKey: ${ivy.var.Amazon.Comprehend.AccessKey}
       secretKey: ${ivy.var.Amazon.Comprehend.SecretKey}
-    LegacyUUID: 77574d12-8a1a-47ea-8165-da1bebde6fa6
+      PATH.REGION: ${ivy.var.Amazon.Comprehend.Region}
