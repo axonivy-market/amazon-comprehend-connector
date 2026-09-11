@@ -75,13 +75,13 @@
           "entity" : {
             "type" : "java.lang.String",
             "code" : [
-              "import com.fasterxml.jackson.databind.ObjectMapper;",
+              "import tools.jackson.databind.ObjectMapper;",
               "import tools.jackson.databind.JsonNode;",
               "",
               "ObjectMapper mapper = new ObjectMapper();",
               "JsonNode actualObj = mapper.readTree(result);",
               "",
-              "out.response.sentiment = actualObj.get(\"Sentiment\").textValue();",
+              "out.response.sentiment = actualObj.get(\"Sentiment\").stringValue();",
               "",
               "JsonNode sentimentScoreNode = actualObj.get(\"SentimentScore\");",
               "out.response.negative = sentimentScoreNode.get(\"Negative\").doubleValue();",

@@ -61,7 +61,7 @@
         "output" : {
           "map" : {
             "out" : "in",
-            "out.detectEntities" : "result.response",
+            "out.detectEntities.entities" : "result.response.entities",
             "out.detection" : "\"entities\""
           }
         }
