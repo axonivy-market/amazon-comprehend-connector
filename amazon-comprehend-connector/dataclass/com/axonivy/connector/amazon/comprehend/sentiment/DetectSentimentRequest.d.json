@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "DetectSentimentRequest",
+  "namespace" : "com.axonivy.connector.amazon.comprehend.sentiment",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "languageCode",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "text",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}
